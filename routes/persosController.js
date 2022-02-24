@@ -55,7 +55,7 @@ router.put("/:id", (req, res) => {
 	);
 });
 
-// delete data
+// delete data !
 
 router.delete("/:id", (req, res) => {
 	if (!ObjectID.isValid(req.params.id))
