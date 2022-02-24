@@ -6,7 +6,7 @@ require("./models/dbConfig");
 const persosRoutes = require("./routes/persosController");
 
 // add middleware
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // recup data in json
 app.use("/persos", persosRoutes);
 
 app.listen(5500, () => console.log("server started"));
