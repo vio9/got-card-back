@@ -13,6 +13,16 @@ router.get("/", (req, res) => {
 	});
 });
 
+//get one characters
+router.get("/:id", (req, res) => {
+	persosModel.findById(req.params.id).then((doc) => {
+		if (!doc) {
+			return res.status(404).end();
+		}
+		return res.status(200).json(doc);
+	});
+});
+
 // post data
 router.post("/", (req, res) => {
 	const newPerso = new persosModel({
